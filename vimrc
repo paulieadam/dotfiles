@@ -40,6 +40,7 @@ set rtp+=~/dotfiles/vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Plugins
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()
 filetype plugin indent on
