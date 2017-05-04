@@ -6,6 +6,7 @@ colorscheme gruvbox       " set colorscheme
 set background=dark
 hi Normal ctermbg=none    " make background non transparent from theme
 set number                " show line numbers
+set colorcolumn=80        " Show line at column 80
 set laststatus=2          " last window always has a statusline
 filetype indent on        " activates indenting for files
 set nohlsearch            " Don't continue to highlight searched phrases.
@@ -33,6 +34,17 @@ if &term =~ '256color'
       set t_ut=
 endif
 
+" Improved autocompletion
+" http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
+set completeopt=longest,menuone
+map <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+ \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+ \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
 " Vundle plugin manager
 " https://github.com/VundleVim/Vundle.vim
 filetype off
@@ -41,6 +53,8 @@ call vundle#begin()
 
 " Plugins
 Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-scripts/AutoComplPop'
 
 call vundle#end()
 filetype plugin indent on
