@@ -40,3 +40,7 @@ echo "Installing vim plugins"
 vim +PluginInstall +qall
 echo "...done"
 
+echo "Getting git prompt and completion"
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.sh
+echo "...done"
