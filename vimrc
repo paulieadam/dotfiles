@@ -22,6 +22,7 @@ set expandtab             " use spaces instead of tabs
 set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
 set mouse=a
+set splitright            " opens vsplit to the right of current buffer
 
 " Highlight line when in insert mode
 autocmd InsertEnter * set cul
