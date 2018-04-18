@@ -24,6 +24,11 @@ set nowrap                " don't wrap text
 set mouse=a
 set splitright            " opens vsplit to the right of current buffer
 
+" temporary vim files
+set undodir=~/vimtempfilesdir/.undo//
+set backupdir=~/vimtempfilesdir/.backup//
+set directory=~/vimtempfilesdir/.swp//
+
 " Highlight line when in insert mode
 autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul

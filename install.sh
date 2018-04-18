@@ -6,9 +6,10 @@
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim tmux.conf"    # list of files/folders to symlink in homedir
+dir=~/dotfiles                      # dotfiles directory
+olddir=~/dotfiles_old               # old dotfiles backup directory
+vimtempfilesdir=~/vimtemp           # dir where vim will store backup, swp and undo files
+files="bashrc vimrc vim tmux.conf"  # list of files/folders to symlink in homedir
 
 ##########
 
@@ -29,6 +30,11 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+echo "Creating $vimtempfilesdir for storing temporary vim files ~"
+mkdir -p $olddir
+mkdir ~/vimtempfilesdir ~/vimtempfilesdir/.backup ~/vimtempfilesdir/.swp ~/vimtempfilesdir/.undo
+echo "...done"
 
 # Install vundle plugin manager for vim
 echo "Cloning vundle..."
