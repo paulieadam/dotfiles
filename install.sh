@@ -56,3 +56,7 @@ echo "Getting dircolors"
 wget https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark -O ~/.dircolors
 echo "..done"
 
+echo "Installing tmuxp"
+pip install --user tmuxp
+echo "..done"
+
