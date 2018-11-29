@@ -36,14 +36,15 @@ mkdir -p $olddir
 mkdir ~/vimtempfilesdir ~/vimtempfilesdir/.backup ~/vimtempfilesdir/.swp ~/vimtempfilesdir/.undo
 echo "...done"
 
-# Install vundle plugin manager for vim
-echo "Cloning vundle..."
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# Install Plug plugin manager for vim
+echo "Installing Plug..."
+curl -fLo ~/dotfiles/vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "...done"
 
 # Install vim plugins
 echo "Installing vim plugins"
-vim +PluginInstall +qall
+vim +PlugInstall +qall
 echo "...done"
 
 echo "Getting git prompt and completion"

@@ -51,16 +51,13 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
-" Vundle plugin manager
-" https://github.com/VundleVim/Vundle.vim
-filetype off
-set rtp+=~/dotfiles/vim/bundle/Vundle.vim
-call vundle#begin()
+" Plug plugin manager
+" https://github.com/junegunn/vim-plug
+call plug#begin('~/dotfiles/vim/plugged')
 
 " Plugins
-Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-scripts/AutoComplPop'
+Plug 'mattn/emmet-vim'
+Plug 'scrooloose/syntastic'
+Plug 'vim-scripts/AutoComplPop'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
