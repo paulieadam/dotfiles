@@ -29,6 +29,14 @@ set undodir=~/vimtempfilesdir/.undo//
 set backupdir=~/vimtempfilesdir/.backup//
 set directory=~/vimtempfilesdir/.swp//
 
+" disable arrow keys and page scroll
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+noremap <PageUp> <Nop>
+noremap <PageDown> <Nop>
+
 " Highlight line when in insert mode
 autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul
