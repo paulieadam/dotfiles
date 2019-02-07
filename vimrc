@@ -67,5 +67,6 @@ call plug#begin('~/dotfiles/vim/plugged')
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/AutoComplPop'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
