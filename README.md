@@ -10,4 +10,4 @@ chmod +x install.sh
 - wget
 - curl
 
-sudp apt install python-pip wget curl -y
+sudo apt install python-pip wget curl -y
