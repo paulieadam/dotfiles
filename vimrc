@@ -23,8 +23,6 @@ set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
 set mouse=a
 set splitright            " opens vsplit to the right of current buffer
-set number relativenumber " turn hybrid line numbers on
-set nu rnu                " turn hybrid line numbers on
 
 " temporary vim files
 set undodir=~/vimtempfilesdir/.undo//
