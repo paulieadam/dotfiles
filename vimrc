@@ -67,5 +67,7 @@ call plug#begin('~/dotfiles/vim/plugged')
 
 " Plugins
 Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 call plug#end()
