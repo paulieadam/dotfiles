@@ -36,6 +36,12 @@ mkdir -p $olddir
 mkdir ~/vimtempfilesdir ~/vimtempfilesdir/.backup ~/vimtempfilesdir/.swp ~/vimtempfilesdir/.undo
 echo "...done"
 
+# Installing fzf and reggrep
+echo "Installing fzf and ripgrep"
+apt install fzf
+apt install ripgrep
+echo "...done"
+
 # Install Plug plugin manager for vim
 echo "Installing Plug..."
 curl -fLo ~/dotfiles/vim/autoload/plug.vim --create-dirs \
