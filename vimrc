@@ -59,6 +59,12 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-f> :Rg<CR>
+nnoremap <silent> <Leader>f :BLines<CR>
+nnoremap <silent> <Leader>c :Commits<CR>
+
 " Plug plugin manager
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/dotfiles/vim/plugged')
@@ -67,5 +73,11 @@ call plug#begin('~/dotfiles/vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'dense-analysis/ale'
 
 call plug#end()
+
+let g:ale_linters = {
+\ 'cs': ['OmniSharp']
+\}
